@@ -13,6 +13,11 @@ int main()
 	cout << "Please select an operation - ";
 	cin >> calc;
 
+	if (calc > 2)
+	{
+		cout << "This operation is missing" << endl;
+	}
+
 	if (calc == 1)
 	{
 		float  one_chislo, two_chislo;
