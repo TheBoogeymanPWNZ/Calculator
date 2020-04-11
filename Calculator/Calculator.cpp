@@ -6,27 +6,25 @@ int main()
 	setlocale(LC_ALL, "ru");
 	using namespace std;
 
-	int calc, Selection;
+	int calc;
 	cout << "I welcome you in the simplest calculator" << endl;
 	cout << "Calculator - 1" << endl;
 	cout << "Discriminant - 2" << endl;
-	cout << "Please select an operation - ";
+	cout << "Finding a percentage - 3" << endl;
+	cout << "\nPlease select an operation - ";
 	cin >> calc;
 
-	if (calc > 2)
-	{
-		cout << "This operation is missing" << endl;
-	}
 
 	if (calc == 1)
 	{
+		int  Selection;
 		float  one_chislo, two_chislo;
-		cout << "Enter the first number - ";
+		cout << "\nEnter the first number - ";
 		cin >> one_chislo;
 		cout << "Enter the second number - ";
 		cin >> two_chislo;
 
-		cout << "Choose a math operation" << endl <<
+		cout << "\nChoose a math operation" << endl <<
 			"1 - Addition" << endl <<
 			"2 - Subtraction" << endl <<
 			"3 - Multiplication" << endl <<
@@ -38,22 +36,22 @@ int main()
 		switch (Selection)
 		{
 		case 1:
-			cout << "Addition result = " << one_chislo + two_chislo << endl;
+			cout << "\nAddition result = " << one_chislo + two_chislo << endl;
 			break;
 		case 2:
-			cout << "Subtraction result = " << one_chislo - two_chislo << endl;
+			cout << "\nSubtraction result = " << one_chislo - two_chislo << endl;
 			break;
 		case 3:
-			cout << "Multiplication result = " << one_chislo * two_chislo << endl;
+			cout << "\nMultiplication result = " << one_chislo * two_chislo << endl;
 			break;
 		case 4:
-			cout << "Division result = " << one_chislo / two_chislo << endl;
+			cout << "\nDivision result = " << one_chislo / two_chislo << endl;
 			break;
 		case 5:
-			cout << "Remainder of the division = " << (int)one_chislo % (int)two_chislo << endl;
+			cout << "\nRemainder of the division = " << (int)one_chislo % (int)two_chislo << endl;
 			break;
 		default:
-			cout << "This command is missing" << endl;
+			cout << "\nThis command is missing" << endl;
 			break;
 		}
 	}
@@ -61,7 +59,7 @@ int main()
 	{
 		float a, b, c, Dis, X1, X2;
 
-		cout << "Enter value a = ";
+		cout << "\nEnter value a = ";
 		cin >> a;
 		cout << "Enter value b = ";
 		cin >> b;
@@ -72,10 +70,10 @@ int main()
 
 		if (Dis < 0)
 		{
-			cout << "Нет вещественных корней \n";
+			cout << "\nНет вещественных корней \n";
 			X1 = -b / (2 * a);
 			X2 = sqrt(fabs(Dis)) / (2 * a);
-			cout << "Комплексные корни уравнения \n";
+			cout << "\nКомплексные корни уравнения \n";
 			cout << a << "X^2 + " << b << "X + " << c << " = 0 \n";
 			if (X2 >= 0)
 			{
@@ -92,10 +90,60 @@ int main()
 		{
 			X1 = (-b + sqrt(Dis)) / (2 * a);
 			X2 = (-b + sqrt(Dis)) / (2 * a);
-			cout << "Вещественные корни уравнения \n";
+			cout << "\nВещественные корни уравнения \n";
 			cout << a << "X^2 + " << b << "X + " << c << " = 0 \n";
 			cout << "X1 = " << X1 << "\t X2 = " << X2 << "\n";
 		}
 	}
 
+	if (calc == 3)
+	{
+		int  Selection;
+		float a, b, c, answer;
+		cout << "\nНайти ваш процент от 100% - 1" << endl;
+		cout << "Найти 100% - 2" << endl;
+		cout << "Найти процент от 100% - 3" << endl;
+		cin >> Selection;
+
+		switch (Selection)
+		{
+		case 1:
+			cout << "\nВведите число равное 100% = ";
+			cin >> a;
+			cout << "Введите находимый процент = ";
+			cin >> b;
+			
+			cout << "\nОтвет: " << a*(b/100) << endl;
+			break;
+
+		case 2:
+			cout << "\nВведите процент = ";
+			cin >> b;
+			cout << "Введите число соответствующее проценту = ";
+			cin >> c;
+			
+			cout << "\nОтвет: " << c / (b / 100) << endl;
+			break;
+
+		case 3:
+			cout << "\nВведите число равное 100% = "; 
+			cin >> a;
+			cout << "Введите число соответствующее находимому проценту = ";
+			cin >> c;
+
+			if (b = c / a)
+			{
+				cout << "Ответ: " << b * 100 << endl;
+			}
+			break;
+		default:
+			break;
+
+		}
+	}
+
+	if (calc > 3)
+	{
+		cout << "This operation is missing" << endl;
+	}
 }
