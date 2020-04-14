@@ -70,10 +70,10 @@ int main()
 
 		if (Dis < 0)
 		{
-			cout << "\nНет вещественных корней \n";
+			cout << "\nNo real roots \n";
 			X1 = -b / (2 * a);
 			X2 = sqrt(fabs(Dis)) / (2 * a);
-			cout << "\nКомплексные корни уравнения \n";
+			cout << "\nComplex roots of the equation \n";
 			cout << a << "X^2 + " << b << "X + " << c << " = 0 \n";
 			if (X2 >= 0)
 			{
@@ -90,7 +90,7 @@ int main()
 		{
 			X1 = (-b + sqrt(Dis)) / (2 * a);
 			X2 = (-b + sqrt(Dis)) / (2 * a);
-			cout << "\nВещественные корни уравнения \n";
+			cout << "\nReal roots of the equation \n";
 			cout << a << "X^2 + " << b << "X + " << c << " = 0 \n";
 			cout << "X1 = " << X1 << "\t X2 = " << X2 << "\n";
 		}
@@ -100,41 +100,41 @@ int main()
 	{
 		int  Selection;
 		float a, b, c, answer;
-		cout << "\nНайти ваш процент от 100% - 1" << endl;
-		cout << "Найти 100% - 2" << endl;
-		cout << "Найти процент от 100% - 3" << endl;
+		cout << "\nFind your percentage of 100% - 1" << endl;
+		cout << "To find 100% - 2" << endl;
+		cout << "Find a percentage of 100% - 3" << endl;
 		cin >> Selection;
 
 		switch (Selection)
 		{
 		case 1:
-			cout << "\nВведите число равное 100% = ";
+			cout << "\nEnter a number equal to 100% = ";
 			cin >> a;
-			cout << "Введите находимый процент = ";
+			cout << "Enter the percentage to be found = ";
 			cin >> b;
 			
-			cout << "\nОтвет: " << a*(b/100) << endl;
+			cout << "\nAnswer: " << a*(b/100) << endl;
 			break;
 
 		case 2:
-			cout << "\nВведите процент = ";
+			cout << "\nEnter percentage = ";
 			cin >> b;
-			cout << "Введите число соответствующее проценту = ";
+			cout << "Enter the number corresponding to the percentage = ";
 			cin >> c;
 			
-			cout << "\nОтвет: " << c / (b / 100) << endl;
+			cout << "\nAnswer: " << c / (b / 100) << endl;
 			break;
 
 		case 3:
-			cout << "\nВведите число равное 100% = "; 
+			cout << "\nEnter a number equal to 100% = "; 
 			cin >> a;
-			cout << "Введите число соответствующее находимому проценту = ";
+			cout << "Enter the number corresponding to the percentage found = ";
 			cin >> c;
 
-			cout << "Ответ: " << (c / a) * 100 << endl;
+			cout << "Answer: " << (c / a) * 100 << endl;
 			break;
 		default:
-			cout << "\nДанная команда отсутствует" << endl;
+			cout << "\nThis command is missing" << endl;
 			break;
 
 		}
@@ -144,4 +144,5 @@ int main()
 	{
 		cout << "This operation is missing" << endl;
 	}
+	system("pause");
 }
