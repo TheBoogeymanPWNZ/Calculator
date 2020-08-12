@@ -89,7 +89,7 @@ int main()
 		else
 		{
 			X1 = (-b + sqrt(Dis)) / (2 * a);
-			X2 = (-b + sqrt(Dis)) / (2 * a);
+			X2 = (-b - sqrt(Dis)) / (2 * a);
 			cout << "\nReal roots of the equation \n";
 			cout << a << "X^2 + " << b << "X + " << c << " = 0 \n";
 			cout << "X1 = " << X1 << "\t X2 = " << X2 << "\n";
